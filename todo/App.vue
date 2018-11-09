@@ -1,9 +1,9 @@
 <template>
-  <view class="container">
-    <text class="text-color-primary">My Vue Native App</text>
-    </view>
+  <view>
+    <button v-bind:title="message" v-bind:on-press="handleBtnPress"/>
+  </view>
 </template>
- 
+
 <style>
 .container {
   background-color: white;
@@ -15,3 +15,19 @@
   color: blue;
 }
 </style>
+
+<script>
+export default {
+  data: function() {
+    return {
+      message: "Hello World"
+    };
+  },
+  methods: {
+    handleBtnPress: function() {
+      alert('Btn Press');
+    }
+  }
+};
+</script>
+
